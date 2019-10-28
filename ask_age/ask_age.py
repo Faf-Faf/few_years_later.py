@@ -14,21 +14,25 @@
 
 def ask_age():
     """
-    ask_age asks the name and the age of the operator and
+    ask_age asks a name and an age of the operator and
     prints an answer
     """
-    print('Введите свое имя: ', end = '')
+    print("Введите свое имя: ", end = '')
     a = input()
-    print('Приятно познакомится,' + ' ' + a + '. А сколько вам лет? ', end = '')
+    print("Приятно познакомится, " + a + ". А сколько вам лет? ", end = '')
     b = int(input())
     c = b + 1
     if c >= 11 and c <= 14:
-        print('Я думал, что вам ' + str(c) + ' лет')
+        print("Я думал, что вам " + str(c) + " лет")
     elif c % 10 >= 2 and c % 10 <= 4:
-        print('Я думал, что вам ' + str(c) + ' годa')
+        print("Я думал, что вам " + str(c) + " годa")
     elif c % 10 >= 5 and c % 10 <= 9:
-        print('Я думал, что вам ' + str(c) + ' лет')
+        print("Я думал, что вам " + str(c) + " лет")
     elif c % 10 == 1:
-        print('Я думал, что вам ' + str(c) + ' год')
+        print("Я думал, что вам " + str(c) + " год")
     else:
-        print('End of program')
+        print("End of program")
+
+
+if __name__ == "__main__":
+    ask_age()
