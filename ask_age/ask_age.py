@@ -20,7 +20,12 @@ def ask_age():
     print("Введите свое имя: ", end = '')
     a = input()
     print("Приятно познакомится, " + a + ". А сколько вам лет? ", end = '')
-    b = int(input())
+    try:
+        b = int(input())
+    except ValueError:
+        print("Нужно вводить число!!!")
+        return
+        
     c = b + 1
     if c >= 11 and c <= 14:
         print("Я думал, что вам " + str(c) + " лет")
